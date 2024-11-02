@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Payment.PagoCitaActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTitular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ej_rodolfo_rivera" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPaciente"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="605dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#2187B5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="-235dp"
+        android:text="@string/cita"
+        android:textColor="#F6F0F0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/toolbarPaciente"
+        app:layout_constraintTop_toTopOf="@+id/toolbarPaciente" />
+
+    <ImageButton
+        android:id="@+id/ibMenuTresRayas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F4ECEC"
+        android:backgroundTint="#2187B5"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu__1_" />
+
+    <ImageButton
+        android:id="@+id/ibBackHistorialResumen"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="372dp"
+        android:background="#F4ECEC"
+        android:backgroundTint="#2187B5"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_white" />
+
+    <TextView
+        android:id="@+id/tvDatosPago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/tus_datos_de_pago"
+        android:textColor="#020A51"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPaciente" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/titular_de_la_tarjeta"
+        android:textColor="#020A51"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatosPago" />
+
+    <TextView
+        android:id="@+id/tvNumeroTarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/n_mero_de_la_tarjeta"
+        android:textColor="#020A51"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeroTarjeta">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="XXXX XXXX XXXX XXXX" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvFechaVencimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/fecha_de_vencimiento"
+        android:textColor="#020A51"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout7"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaVencimiento">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etVencimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="MM/YYY" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/cvv"
+        android:textColor="#020A51"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvFechaVencimiento"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout7"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCvv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="XXX" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvMonto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/monto_total"
+        android:textColor="#020A51"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+
+    <TextView
+        android:id="@+id/tvPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/precio"
+        android:textColor="#0093AB"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMonto" />
+
+    <Button
+        android:id="@+id/btConfirmar"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#FD5D5D"
+        android:text="@string/confirmar"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrecio" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

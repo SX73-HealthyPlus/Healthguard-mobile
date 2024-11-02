@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MedicalHistory.HistorialMedicoResumenActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPaciente"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="605dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#2187B5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/toolbarOpciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="-235dp"
+        android:text="@string/menu"
+        android:textColor="#F6F0F0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/toolbarPaciente"
+        app:layout_constraintTop_toTopOf="@+id/toolbarPaciente" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarOpciones"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:background="#FFFFFF"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toStartOf="@+id/ibNotificaciones"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_inicio"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-70dp"
+        android:background="#FFFFFF"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toStartOf="@+id/ibPerfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_notificaciones"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/ibPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-200dp"
+        android:background="#EFEAEA"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toStartOf="@+id/ibAjustes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_perfil"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/ibAjustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-300dp"
+        android:background="#EDE9E9"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarOpciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_ajustes"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        android:contentDescription="@string/settingsSrcImage" />
+
+    <TextView
+        android:id="@+id/tvBtnInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="290dp"
+        android:text="@string/inicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibInicio" />
+
+    <TextView
+        android:id="@+id/tvBtnNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:text="@string/notificaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibNotificaciones" />
+
+    <TextView
+        android:id="@+id/tvBtnPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-130dp"
+        android:text="@string/perfil"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarOpciones"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibPerfil" />
+
+    <TextView
+        android:id="@+id/tvBotonAjustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-300dp"
+        android:text="@string/ajustes"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarOpciones"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibAjustes" />
+
+    <ImageButton
+        android:id="@+id/ibMenuTresRayas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F4ECEC"
+        android:backgroundTint="#2187B5"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu__1_" />
+
+    <TextView
+        android:id="@+id/tvNombrePacienteResumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/tvnombrepaciente"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPaciente" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPaciente"
+        app:srcCompat="@drawable/anciano__1_"
+        android:contentDescription="@string/photoHistorialSrcImage" />
+
+    <TextView
+        android:id="@+id/tvActualizarInfoHistorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="128dp"
+        android:text="@string/actualizar_informacion_historial"
+        android:textColor="#0093AB"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEdad" />
+
+    <TextView
+        android:id="@+id/tvEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="185dp"
+        android:text="@string/tvfechapacientehistorial"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombrePacienteResumen" />
+
+
+    <ImageButton
+        android:id="@+id/ibBackHistorialResumen"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="372dp"
+        android:background="#F4ECEC"
+        android:backgroundTint="#2187B5"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_white" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="374dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="216dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarPaciente"
+        app:srcCompat="@drawable/historial_info_general"
+        android:contentDescription="@string/infogeneralSrcImage" />
+
+    <TextView
+        android:id="@+id/tvPesoHistorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pesoHistorial"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.429"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/tvPesoHistorialResumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:text="@string/pesoHistorialResumen"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/toolbarPaciente"
+        app:layout_constraintVertical_bias="0.429"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/tvMasaCorporalHistorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:text="@string/masaCorporalHistorial"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/tvMasaCorporalHistorialResumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:text="@string/masaCorporalHistorialResumen"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/tvAlturaHistorialResumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="92dp"
+        android:text="@string/alturaHistorialResumen"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/tvAlturaHistorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="@string/alturaHistorial"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        tools:ignore="SmallSp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="372dp"
+        android:layout_height="149dp"
+        android:layout_marginBottom="124dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarOpciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/historial_antecedentes"
+        android:contentDescription="@string/antecedentesSrcImage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAntecedentesPatologicos"
+        android:layout_width="44dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="329dp"
+        android:layout_height="112dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarOpciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarPaciente"
+        app:layout_constraintVertical_bias="0.555"
+        app:srcCompat="@drawable/historial_alergias"
+        android:contentDescription="@string/alergiasSrcImage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMedicamentosAlergias"
+        android:layout_width="44dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFactNaturalesAlergias"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarPaciente"
+        app:layout_constraintVertical_bias="0.578" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:text="@string/guardarHistorialResumen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

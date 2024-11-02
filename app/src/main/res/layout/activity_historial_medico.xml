@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9F9"
+    android:backgroundTint="#E1E1E1">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPaciente"
+        app:srcCompat="@drawable/anciano__1_" />
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPaciente"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="605dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#2187B5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/toolbarOpciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="-235dp"
+        android:text="@string/menu"
+        android:textColor="#F6F0F0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/toolbarPaciente"
+        app:layout_constraintTop_toTopOf="@+id/toolbarPaciente" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarOpciones"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:background="#FFFFFF"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toStartOf="@+id/ibNotificaciones"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_inicio"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-70dp"
+        android:background="#FFFFFF"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toStartOf="@+id/ibPerfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_notificaciones"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/ibPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-200dp"
+        android:background="#EFEAEA"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toStartOf="@+id/ibAjustes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_perfil"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/ibAjustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-300dp"
+        android:background="#EDE9E9"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarOpciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_ajustes"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvBtnInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="290dp"
+        android:text="@string/inicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibInicio" />
+
+    <TextView
+        android:id="@+id/tvBtnNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:text="@string/notificaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibNotificaciones" />
+
+    <TextView
+        android:id="@+id/tvBtnPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-130dp"
+        android:text="@string/perfil"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarOpciones"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibPerfil" />
+
+    <TextView
+        android:id="@+id/tvBotonAjustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-300dp"
+        android:text="@string/ajustes"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarOpciones"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibAjustes" />
+
+    <ImageButton
+        android:id="@+id/ibMenuTresRayas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F4ECEC"
+        android:backgroundTint="#2187B5"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu__1_" />
+
+    <TextView
+        android:id="@+id/tvNombrePacienteResumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="52dp"
+        android:text="@string/tvnombrepaciente"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPaciente" />
+
+    <TextView
+        android:id="@+id/tvEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="185dp"
+        android:text="@string/tvfechapacientehistorial"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombrePacienteResumen" />
+
+    <TextView
+        android:id="@+id/tvActualizarInfoHistorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="128dp"
+        android:text="@string/actualizar_informacion_historial"
+        android:textColor="#0093AB"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEdad" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="183dp"
+        android:layout_height="191dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginBottom="8dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toTopOf="@+id/tvAvisoHistorial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/warning_" />
+
+
+    <TextView
+        android:id="@+id/tvAvisoHistorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/aviso_historial"
+        android:textAlignment="center"
+        android:textColor="#FE2400"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageButton
+        android:id="@+id/ibBackHistorialResumen"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="372dp"
+        android:background="#F4ECEC"
+        android:backgroundTint="#2187B5"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_white" />
+
+    <Button
+        android:id="@+id/btAdjuntar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="61dp"
+        android:text="@string/adjuntar_historial"
+        app:layout_constraintBottom_toTopOf="@+id/toolbarOpciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvisoHistorial" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9F9"
+    android:backgroundTint="#E1E1E1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPaciente"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#2187B5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="-235dp"
+        android:text="@string/menu"
+        android:textColor="#F6F0F0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/toolbarPaciente"
+        app:layout_constraintTop_toTopOf="@+id/toolbarPaciente" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarOpciones"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="146dp"
+        android:text="@string/bienvenidotv"
+        android:textColor="#7CB5CF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPaciente" />
+
+    <ImageButton
+        android:id="@+id/ibInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/ibNotificaciones"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_inicio"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-70dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/ibPerfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_notificaciones"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/ibPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-200dp"
+        android:background="#EFEAEA"
+        app:layout_constraintEnd_toStartOf="@+id/ibAjustes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_perfil"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/ibAjustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-300dp"
+        android:background="#EDE9E9"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarOpciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_ajustes"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvBtnInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="290dp"
+        android:text="@string/inicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibInicio" />
+
+    <TextView
+        android:id="@+id/tvBtnNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:text="@string/notificaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibNotificaciones" />
+
+    <TextView
+        android:id="@+id/tvBtnPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-130dp"
+        android:text="@string/perfil"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarOpciones"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibPerfil" />
+
+    <TextView
+        android:id="@+id/tvBotonAjustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-300dp"
+        android:text="@string/ajustes"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarOpciones"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibAjustes" />
+
+    <TextView
+        android:id="@+id/tvBienvenida2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginEnd="118dp"
+        android:text="@string/que_necesitas"
+        android:textColor="#7CB5CF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBienvenida" />
+
+    <Button
+        android:id="@+id/btHMedico"
+        android:layout_width="145dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="27dp"
+        android:backgroundTint="#FFFBFB"
+        app:layout_constraintEnd_toStartOf="@+id/btSacarCita"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBienvenida2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvHMedico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Historial Médico"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/btHMedico"
+        app:layout_constraintStart_toStartOf="@+id/btHMedico"
+        app:layout_constraintTop_toBottomOf="@+id/ivHMedico" />
+
+    <Button
+        android:id="@+id/btSacarCita"
+        android:layout_width="144dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="47dp"
+        android:backgroundTint="#FFFBFB"
+        android:text="@string/btSacarCita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btHMedico"
+        app:layout_constraintTop_toBottomOf="@+id/tvBienvenida2" />
+
+    <TextView
+        android:id="@+id/tvSacarCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/sacar_cita"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/btSacarCita"
+        app:layout_constraintStart_toStartOf="@+id/btSacarCita"
+        app:layout_constraintTop_toBottomOf="@+id/ivSacarCita" />
+
+    <ImageView
+        android:id="@+id/ivHMedico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/HistorialMedico"
+        app:layout_constraintEnd_toEndOf="@+id/btHMedico"
+        app:layout_constraintStart_toStartOf="@+id/btHMedico"
+        app:layout_constraintTop_toTopOf="@+id/btHMedico"
+        app:srcCompat="@drawable/icono_historial_medico" />
+
+    <ImageView
+        android:id="@+id/ivSacarCita"
+        android:layout_width="72dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/SacarCita"
+        app:layout_constraintEnd_toEndOf="@+id/btSacarCita"
+        app:layout_constraintStart_toStartOf="@+id/btSacarCita"
+        app:layout_constraintTop_toTopOf="@+id/btSacarCita"
+        app:srcCompat="@drawable/icono_sacar_cita" />
+
+    <ImageButton
+        android:id="@+id/ibMenuTresRayas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F4ECEC"
+        android:backgroundTint="#2187B5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu__1_"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    android:backgroundTint="#E1E1E1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPaciente"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#2187B5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/Titulo"
+        android:textColor="#F6F0F0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarPaciente"
+        app:layout_constraintStart_toStartOf="@+id/toolbarPaciente"
+        app:layout_constraintTop_toTopOf="@+id/toolbarPaciente" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarOpciones"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:background="#FFFFFF"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toStartOf="@+id/ibNotificaciones"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_inicio"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-70dp"
+        android:background="#FFFFFF"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toStartOf="@+id/ibPerfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_notificaciones"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/ibPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-200dp"
+        android:background="#03A9F4"
+        android:backgroundTint="#03A9F4"
+        android:contentDescription="Perfil"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toStartOf="@+id/ibAjustes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_perfil"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/ibAjustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-300dp"
+        android:background="#EDE9E9"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarOpciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarOpciones"
+        app:srcCompat="@drawable/btn_ajustes"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvBtnInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="290dp"
+        android:text="@string/inicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibInicio" />
+
+    <TextView
+        android:id="@+id/tvBtnNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:text="@string/notificaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibNotificaciones" />
+
+    <TextView
+        android:id="@+id/tvBtnPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-130dp"
+        android:text="@string/perfil"
+        android:textColor="#03A9F4"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarOpciones"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibPerfil" />
+
+    <TextView
+        android:id="@+id/tvBotonAjustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-300dp"
+        android:text="@string/ajustes"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarOpciones"
+        app:layout_constraintStart_toStartOf="@+id/toolbarOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/ibAjustes" />
+
+    <ImageButton
+        android:id="@+id/ibMenuTresRayas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F4ECEC"
+        android:backgroundTint="#2187B5"
+        android:importantForAccessibility="no"
+        android:outlineAmbientShadowColor="#03A9F4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu__1_"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/ibBackWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#2187B5"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="@+id/toolbarPaciente"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_white"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btInfoGeneralEnPerfil"
+        android:layout_width="358dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#FAF6F6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPaciente"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/ivFecha"
+        android:layout_width="25dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#AFB7BD"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toEndOf="@+id/ibFotoEdit"
+        app:layout_constraintTop_toTopOf="@+id/etDate"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/ibEdit"
+        android:layout_width="24dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="32dp"
+        android:background="#AFB7BD"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="@+id/btInfoGeneralEnPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPaciente"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        tools:ignore="ImageContrastCheck,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/ivTelefono"
+        android:layout_width="26dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:background="#AFB7BD"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toEndOf="@+id/ibFotoEdit"
+        app:layout_constraintTop_toBottomOf="@+id/ivFecha"
+        app:srcCompat="@android:drawable/ic_menu_call"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <Button
+        android:id="@+id/btActualizar"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint="#FA5252"
+        android:text="Actualizar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPeso" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etAltura"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="36dp"
+        android:hint="Altura"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="#616161"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btInfoGeneralEnPerfil" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etMasaCorporal"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="36dp"
+        android:hint="Masa Corporal"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColorHint="#616161"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAltura" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etPeso"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Peso"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColorHint="#616161"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMasaCorporal" />
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="97dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="-5dp"
+        android:ems="10"
+        android:hint="@string/fechaEjemplo"
+        android:inputType="date"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/ivFecha"
+        app:layout_constraintTop_toBottomOf="@+id/etApellido"
+        tools:ignore="SmallSp" />
+
+    <EditText
+        android:id="@+id/etTelefono"
+        android:layout_width="97dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:hint="@string/numeroEjemplo"
+        android:inputType="number"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/ivTelefono"
+        app:layout_constraintTop_toTopOf="@+id/etDate" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/ibFotoEdit"
+        app:layout_constraintTop_toTopOf="@+id/btInfoGeneralEnPerfil"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/etApellido"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:hint="Apellido"
+        android:inputType="textPersonName"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/ibFotoEdit"
+        app:layout_constraintTop_toBottomOf="@+id/etNombre"
+        tools:ignore="SmallSp,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/ibFotoEdit"
+        android:layout_width="97dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="35dp"
+        android:contentDescription="Image"
+        app:layout_constraintStart_toStartOf="@+id/btInfoGeneralEnPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPaciente"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

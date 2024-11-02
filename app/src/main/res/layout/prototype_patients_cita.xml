@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvClientes"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="#F3F3F3"
+    android:backgroundTint="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#FBF4F4"
+        tools:ignore="ExtraText">
+
+        <Button
+            android:id="@+id/btnEditarHistorial"
+            android:layout_width="111dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#2187B5"
+            android:text="Editar HIstorial"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnRecetaMedica"
+            android:layout_width="111dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#2187B5"
+            android:text="Receta Medica"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnEditarHistorial" />
+
+        <TextView
+            android:id="@+id/tvNombrePaciente"
+            android:layout_width="132dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="51dp"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivPacienteFoto"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Valentina Laverde de la Rosa" />
+
+        <TextView
+            android:id="@+id/tvEdadPaciente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-15dp"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@+id/ivPacienteFoto"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombrePaciente"
+            tools:text="65 años" />
+
+        <ImageView
+            android:id="@+id/ivPacienteFoto"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background" /><![CDATA[
+
+
+
+         />
+
+
+    ]]>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
